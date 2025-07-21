@@ -28,6 +28,6 @@ The initial version is 0.1.0.
 - [Elizaveta Matalyga](https://github.com/spooozy) - backend
 - [Olga Yurchenko](https://github.com/Kavinsky228) - backend
 
-## Licence
+## License
 
 The team still in the middle of the process to choice the license.
