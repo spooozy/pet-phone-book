@@ -29,3 +29,5 @@ The initial version is 0.1.0.
 - [Olga Yurchenko](https://github.com/Kavinsky228) - backend
 
 ## Licence
+
+The team still in the middle of the process to choice the license.
