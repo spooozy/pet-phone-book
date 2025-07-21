@@ -3,7 +3,9 @@
 ## Overview
 
 The goal of the project is to implement a phonebook.
-The phonebook is an app to store info about your acquaintances and ways to contact them.
+The phonebook is an app to store info about your acquaintances and ways to contact them. 
+With this phonebook it will be possible to store not only the phone numbers of your acquaintances, but also links to their social networks, contacts in messengers and e-mail. 
+Now all contacts can be stored centrally, which will significantly reduce the time you need to find a way to contact your acquaintances.
 
 ## How to run / to build the app
 
