@@ -13,8 +13,8 @@ There's a long-term branch called `main`. It contains only a stable code. Stable
 ```bash
 git checkout -b <issue-number>-<name-of-the-branch>
 ```
-where:
-- `<issue-number>-<name-of-the-branch>` is the name of the newly created branch. The name of the branch must have the following format: words separated by dashes. 
-- `<issue-number>` - number of the correponding issue we're working on.
-- `<name-of-the-branch>` - description related to the title of the task. The description must describe the task that is being work on in the current branch.
+    where:
+        - `<issue-number>-<name-of-the-branch>` is the name of the newly created branch. The name of the branch must have the following format: words separated by dashes. 
+        - `<issue-number>` - number of the correponding issue we're working on.
+        - `<name-of-the-branch>` - description related to the title of the task. The description must describe the task that is being work on in the current branch.
 1. Work on the task.
