@@ -12,9 +12,10 @@ There's a long-term branch called `main`. It contains only a stable code. Stable
 1. Assign task to yourself (including people who might work on the task)
 1. Make a short-lived branch from the latest version of the `main` branch:
 ```bash
-git checkout -b <<issue-number>-<name-of-the-branch>>
+git checkout -b <issue-number>-<name-of-the-branch>
 ```
-where <<issue-number>-<name-of-the-branch>> is the name of the newly created branch, слова в названии указывать через дефисы.
-<issue-number> - number of the correponding issue we're working on.
-<name-of-the-branch> - описание задачи близкое к тайтл соответствующей задаче на борде; должно описывать задачу, которая решается в данной ветке
+where:
+- `<issue-number>-<name-of-the-branch>` is the name of the newly created branch, слова в названии указывать через дефисы.
+- `<issue-number>` - number of the correponding issue we're working on.
+- `<name-of-the-branch>` - описание задачи близкое к тайтл соответствующей задаче на борде; должно описывать задачу, которая решается в данной ветке
 1. Work on the task.
