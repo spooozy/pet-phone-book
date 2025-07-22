@@ -8,7 +8,7 @@ There's a long-term branch called `main`. It contains only a stable code. Stable
         - the "Why" section: explanation of the business needs (why do we need the task?).
         - the "What" section: task description, specific requirements or steps to complete the task.
     - Use proper labels if needed;
-1. Assign task to yourself (including people who might work on the task)
+1. Assign task to yourself (including people who might work on the task).
 1. Make a short-lived branch from the latest version of the `main` branch:
     ```bash
     git checkout -b <issue-number>-<name-of-the-branch>
