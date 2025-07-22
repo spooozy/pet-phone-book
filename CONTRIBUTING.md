@@ -10,9 +10,9 @@ There's a long-term branch called `main`. It contains only a stable code. Stable
     - Use proper labels if needed;
 1. Assign task to yourself (including people who might work on the task)
 1. Make a short-lived branch from the latest version of the `main` branch:
-```bash
-git checkout -b <issue-number>-<name-of-the-branch>
-```
+    ```bash
+    git checkout -b <issue-number>-<name-of-the-branch>
+    ```
     where:
         - `<issue-number>-<name-of-the-branch>` is the name of the newly created branch. The name of the branch must have the following format: words separated by dashes. 
         - `<issue-number>` - number of the correponding issue we're working on.
