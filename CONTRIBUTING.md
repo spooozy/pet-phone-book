@@ -5,7 +5,7 @@ There's a long-term branch called `main`. It contains only a stable code. Stable
 1. Make sure you have a corresponding task on the board. If not, please make an issue with the following structure:
     - Clear and comprehensive title;
     - The description must include:
-        - the "Why" section: explanation of the business needs (why do we need the task?)
+        - the "Why" section: explanation of the business needs (why do we need the task?).
         - the "What" section: task description, specific requirements or steps to complete the task.
     - Use proper labels if needed;
 1. Assign task to yourself (including people who might work on the task)
