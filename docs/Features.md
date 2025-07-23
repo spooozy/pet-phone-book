@@ -4,9 +4,9 @@ This document provides an overview of the application's functionality, including
 
 ## Core Features:
 
-### Implemented:
+### Done:
 
-### Not Implemented:
+### In Development:
 
 - **Contact List Overview**:
     - User can view all saved contacts in alphabetical order. If contacts are not saved, a corresponding message is displayed.
