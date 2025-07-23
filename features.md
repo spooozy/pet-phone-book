@@ -29,7 +29,7 @@
 - Validation:
     - If fields are invalid, errors are highlighted with descriptive messages.
 - Save Flow:
-    - On successful save -> confirmation message -> redirect to contact list.
+    - On successful save -> confirmation message -> redirect to view created contact.
     - On cancel -> form resets -> return to contact list.
 
 ### 2.2 Edit Contact
