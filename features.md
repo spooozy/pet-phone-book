@@ -1,66 +1,35 @@
 # Features Overview
 
+This document provides an overview of the application's functionality, including features that have already been implemented, features in the development process, and options for expanding the functionality.
+
 ## Core Features:
-- **Contact List Overview [Under development]**:
-    - User can see all saved contacts in alphabetical order.
-- **View Contact Details [Under development]**:
-    - User can view all saved details about selected contact.
-- **Add New Contact [Under development]**:
-    - User can create a new contact with different communication methods (phone number, email, Telegram, Instagram, etc.) and additional info such as date of birth, place of work and address.
-- **Edit Contact [Under development]**:
-    - User can edit contacts by changing saved data or adding new ones.
-- **Delete Contact [Under development]**:
+
+### Implemented:
+
+### Not Implemented:
+
+- **Contact List Overview**:
+    - User can view all saved contacts in alphabetical order. If contacts are not saved, a corresponding message is displayed.
+
+- **View Contact Details**:
+    - User can view all saved details about the selected contact in read-only format.
+
+- **Add New Contact**:
+    - User can create a new contact by filling out a form with mandatory fields (name and primary contact method) and additional information (phone number, email, social networks, etc.). 
+    - Data validation ensures the correctness of the input, and a confirmation message is displayed upon successful saving.
+
+- **Edit Contact**:
+    - The user can edit an existing contact by opening a pre-filled form. After making changes, the user must validate or cancel the changes.
+
+- **Delete Contact**:
     - User can delete a contact with confirmation recieved before deleting to avoid accidental actions.
-- **Search Through Contact List[Under development]**:
-    - User can find the contact he is interested in through the search bar by full name.
 
-## More About PhoneBook Features:
-## 1. Contact List Overview
-- Displays all contacts in alphabetical order upon app launch.
-- Shows a message if no contacts saved.
+- **Search Through Contact List**:
+    - User can find the desired contact via the search bar, which filters data in real time. 
+    - The search is performed by matches of the search query and substrings in the names of contacts.
 
-## 2. Contact Operations
-### 2.1 Add Contact
-- Click on "Add Contact" opens a form with:
-    - Required Fields:
-        - Name.
-        - Priority method of communication (phone number field is shown, other fields available with pressing “Alternative ways of communication” button).
-    - Optional Fields.
-- Validation:
-    - If fields are invalid, errors are highlighted with descriptive messages.
-- Save Flow:
-    - On successful save -> confirmation message -> redirect to view created contact.
-    - On cancel -> form resets -> return to contact list.
 
-### 2.2 Edit Contact
-- Initiation:
-    - Clicking "Edit" button opens a pre-filled form with existing contact data.
-- Validation:
-    - Incorrect fields are highlighted with error messages.
-- Save Flow:
-    - On save -> validation -> DB update -> success message -> return to contact details view.
-- Cancel Flow:
-    - Confirmation dialog:
-        - Yes -> reset form -> return to contact details view.
-        - No -> resume editing.
-
-### 2.3 Delete Contact
-- Initiation: 
-    - Clicking "Delete" button triggers a confirmation:
-        - Confirm -> contact removed -> success message -> return to contact list.
-        - Cancel -> return to contact list without changes.
-
-### 2.4 View Contact Details
-- Display:
-    - All saved contact fields are shown in a read-only view.
-
-## 3. Contact Search
-- Search Bar: Input field at the top of the contact list.
-- Functionality:
-    - Real-time filtering by name (case-insensitive).
-    - If no matches -> "No results found for '[query]'".
-
-## Out of Scope for MVP
+## Potential implementations:
 - Filtering by multiple parameters
 - Adding specific contacts to favorites
 - Adding an avatar field for a contact
