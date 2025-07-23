@@ -30,6 +30,7 @@ This document provides an overview of the application's functionality, including
 
 
 ## Potential implementations:
+
 - Filtering by multiple parameters
 - Adding specific contacts to favorites
 - Adding an avatar field for a contact
