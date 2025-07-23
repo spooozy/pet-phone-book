@@ -31,3 +31,7 @@ The initial version is 0.1.0.
 ## License
 
 The team still in the middle of the process to choice the license.
+
+## For contributors
+
+You can find useful information and links in the file "CONTRIBUTING.md "
