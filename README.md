@@ -23,10 +23,10 @@ The initial version is 0.1.0.
 
 - [Kseniya Korzun](https://github.com/Cassiopeia2107) - Project Manager
 - [Elizaveta Shakhlan](https://github.com/shaklanchik) - Product Manager
-- [Mazim Kozlov](https://github.com/maks2134) - CTO (backend + frontend)
-- [Roman Kondratenya](https://github.com/labudap) - backend
+- [Maksim Kozlov](https://github.com/maks2134) - CTO (backend + frontend)
+- [Roman Kondratenya](https://github.com/labudap) - backend + frontend
 - [Elizaveta Matalyga](https://github.com/spooozy) - backend
-- [Olga Yurchenko](https://github.com/Kavinsky228) - backend
+- [Olga Yurchenko](https://github.com/Kavinsky228) - backend (automation)
 
 ## License
 
