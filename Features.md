@@ -1,6 +1,6 @@
 # Features Overview
 
-This document provides an overview of the application's functionality, including features that have already been implemented, features in the development process, and options for expanding the functionality.
+This document provides an overview of the application's functionality, including features that have already been implemented and features in the development process.
 
 ## Core Features:
 
@@ -27,11 +27,3 @@ This document provides an overview of the application's functionality, including
 - **Search Through Contact List**:
     - User can find the desired contact via the search bar, which filters data in real time. 
     - The search is performed by matches of the search query and substrings in the names of contacts.
-
-
-## Potential implementations:
-
-- Filtering by multiple parameters
-- Adding specific contacts to favorites
-- Adding an avatar field for a contact
-- Grouping contacts by tags
