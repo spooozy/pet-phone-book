@@ -13,6 +13,8 @@ The implementation is in progress.
 
 Every change must be reviewed and must pass all the tests in order to be merged.
 
+[Branching Strategy](BRANCHING_STRATEGY.md)
+
 ### Versioning info
 
 We're using the [SemVer 2.0](https://semver.org).
