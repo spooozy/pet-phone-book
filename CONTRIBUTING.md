@@ -2,9 +2,9 @@
 
 Project uses a simplified [GitHub Flow Branching Strategy](https://docs.github.com/en/get-started/using-github/github-flow) with two core branch types:
 - Primary Branch:
-    - `main` - the only permanent branch, representing the production-ready state at all times. It contains only a stable code that passed all the quality gates (compiler checks, code review process, tests).
+    - `main` - the only permanent branch, representing the production-ready state at all times. It contains only a stable code that passed all the quality gates (compiler checks, linters and tests).
 - Development Branches:
-    - all other branches are temporary and created from main for specific work items.
+    - all other branches are temporary and created from `main` for specific work items.
 
 ## How to make a PR
 
