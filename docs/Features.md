@@ -15,8 +15,8 @@ This document provides an overview of the application's functionality, including
     - User can view all saved details about the selected contact in read-only format.
 
 - **Add Contact**:
-    - User can create a new contact by specifying a name and preferred method of communication (phone number, email or Telegram, Instagram, VK and Facebook nickname).
-    - User can also save all provided methods of communication that were not selected as preffered, as well as some additional information (last name, birthday, address, place of work and notes).
+    - User can create a new contact by filling a name and at least one method of communication (phone number, email or Telegram, Instagram, VK and Facebook nickname).
+    - User can also save info for all provided methods as well as some additional information (last name, birthday, address, place of work and notes).
     - Data validation ensures that the input is correct, and accompanying messages inform User about successful saving or errors that have occurred.
 
 - **Edit Contact**:
