@@ -1,6 +1,6 @@
-# Database Schema Documentation  
+# Database Documentation  
 
-## **Contacts Database Structure**  
+## **Contacts Database**  
 
 ![Database Schema](./schema.png)  
 
@@ -13,7 +13,7 @@ Main table for storing contact information.
 
 | Field | Type | Description |  
 |-------|------|-------------|  
-| `id` | `INTEGER` | Primary key, auto-incremented unique identifier. |  
+| `id_contact` | `INTEGER` | Primary key, auto-incremented unique identifier. |  
 | `name` | `TEXT NOT NULL` | Stores the contact's name (required). |  
 
 ---
@@ -23,7 +23,8 @@ Stores optional details about contacts.
 
 | Field | Type | Description |  
 |-------|------|-------------|  
-| `id_contact` | `INTEGER` | Foreign key referencing `contacts(id)`. **Primary key** of this table. |  
+| `id` | `INTEGER` | Primary key, auto-incremented unique identifier. |  
+| `id_contact` | `INTEGER` | Foreign key referencing `contacts(id_contact)`. |  
 | `birthday` | `TEXT` | Contact’s birth date (format: `YYYY-MM-DD`). |  
 | `workplace` | `TEXT` | Company or job title. |  
 | `address` | `TEXT` | Physical address. |  
@@ -31,7 +32,7 @@ Stores optional details about contacts.
 
 **Key Constraint**:  
 ```sql
-FOREIGN KEY (id_contact) REFERENCES contacts(id) ON DELETE CASCADE
+FOREIGN KEY (id_contact) REFERENCES Contacts(id_contact) ON DELETE CASCADE
 ```  
 *(Deleting a contact automatically removes its additional info.)*  
 
@@ -42,12 +43,13 @@ Stores up to 10 communication methods per contact.
 
 | Field | Type | Description |  
 |-------|------|-------------|  
-| `id_contact` | `INTEGER` | Foreign key referencing `contacts(id)`. **Primary key** of this table. |  
+| `id` | `INTEGER` | Primary key, auto-incremented unique identifier. |  
+| `id_contact` | `INTEGER` | Foreign key referencing `contacts(id_contact)`. |
 | `way_1` to `way_10` | `TEXT` | Fields for contact details (e.g., phone, email, social media). |  
 
 **Key Constraint**:  
 ```sql
-FOREIGN KEY (id_contact) REFERENCES contacts(id) ON DELETE CASCADE
+    FOREIGN KEY (id_contact) REFERENCES Contacts(id_contact) ON DELETE CASCADE
 ```  
 *(Deleting a contact removes all linked communication methods.)*  
 
@@ -88,12 +90,10 @@ CREATE VIRTUAL TABLE contacts_fts USING fts5(name, content='contacts', content_r
 
 4. **Test with sample data**:  
    ```sql
-   -- Insert a contact
    INSERT INTO contacts (name) VALUES ('Test User');
    INSERT INTO additional_information VALUES (1, '2000-01-01', 'Test Corp', 'Test City', 'Sample note');
    INSERT INTO communication_methods VALUES (1, '+1234567890', 'test@example.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
-   -- Search (matches "Test")
    SELECT * FROM contacts_fts WHERE name MATCH 'Test*';
    ```  
 
