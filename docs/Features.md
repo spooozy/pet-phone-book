@@ -25,7 +25,8 @@ This document provides an overview of the application's functionality, including
     - After making changes User must confirm or cancel them.
 
 - **Delete Contact**:
-    - User can delete all contact data. This action also requires User's confirmation to avoid accidental actions and is accompanied by notification messages.
+    - User can delete all contact data. 
+    - This action also requires User's confirmation to avoid accidental actions and is accompanied by notification messages.
 
 - **Search Through Contact List**:
     - User can find the desired contact via the search bar, which filters data in real time. 
