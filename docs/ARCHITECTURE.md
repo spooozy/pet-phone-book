@@ -14,11 +14,11 @@ The app is cut in virtual layers. Each layer has a unique responsibility:
 
 See the high-level architecture below (as a diagram):
 
-[img]
+![architecture scheme](./architecture.png)
 
 The diagram (scheme) shows the data flow (how the data is passed between layers and components) and navigation flow (dependencies between UI views).
 The data flow for the specific use case is coloured with its own colour to simplify tracking and improve readability of the scheme.
-If you have to edit/update the architecture, use the [`draw.io`](https://draw.io) service and the [raw XML file]().
+If you have to edit/update the architecture, use the [`draw.io`](https://draw.io) service and the [raw XML file](./architecture.drawio).
 
 ## Use cases and its flows
 
