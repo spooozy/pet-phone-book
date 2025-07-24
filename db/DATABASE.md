@@ -2,7 +2,7 @@
 
 ## **Contacts Database Structure**  
 
-![Database Schema](schema.png)  
+![Database Schema](./schema.png)  
 
 ---
 
