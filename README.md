@@ -5,13 +5,13 @@
 The goal of the project is to implement a phonebook.
 The phonebook is an app to store info about your acquaintances and ways to contact them.
 
-[View architecture documentation](./ARCHITECTURE.md)  
-
 ## How to run / to build the app
 
 The implementation is in progress.
 
 ## Contribution guide
+
+The project architecture is available [here](docs/ARCHITECTURE.md)  
 
 Every change must be reviewed and must pass all the tests in order to be merged.
 
