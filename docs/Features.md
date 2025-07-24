@@ -14,15 +14,18 @@ This document provides an overview of the application's functionality, including
 - **View Contact Details**:
     - User can view all saved details about the selected contact in read-only format.
 
-- **Add New Contact**:
-    - User can create a new contact by filling out a form with mandatory fields (name and primary contact method) and additional information (phone number, email, social networks, etc.). 
-    - Data validation ensures the correctness of the input, and a confirmation message is displayed upon successful saving.
+- **Add Contact**:
+    - User can create a new contact by specifying a name and preferred method of communication (phone number, email or Telegram, Instagram, VK and Facebook nickname).
+    - User can also save all provided methods of communication that were not selected as preffered, as well as some additional information (last name, birthday, address, place of work and notes).
+    - Data validation ensures that the input is correct, and accompanying messages inform User about successful saving or errors that have occurred.
 
 - **Edit Contact**:
-    - The user can edit an existing contact by opening a pre-filled form. After making changes, the user must validate or cancel the changes.
+    - User can edit an existing contact by changing a form with the contact data already saved. 
+    - Same validation rules and messaging behavior as "Add Contact" apply.
+    - After making changes User must confirm or cancel them.
 
 - **Delete Contact**:
-    - User can delete a contact with confirmation recieved before deleting to avoid accidental actions.
+    - User can delete all contact data. This action also requires User's confirmation to avoid accidental actions and is accompanied by notification messages.
 
 - **Search Through Contact List**:
     - User can find the desired contact via the search bar, which filters data in real time. 
