@@ -5,7 +5,7 @@ The document describes an architecture of the project and high-level details abo
 
 ## Overview
 
-The app is cut in virtual layers. Each layer has a unique responsibility:
+The app is cut into virtual layers. Each layer has a unique responsibility:
 - UI Layer: renders UI elements and handles interaction from a user (touches, clicks, input from a keyboard). Here lies all elements that depends on a UI framework. The UI layer contains `UI triggers` which trigger logic and/or navigation events.
 - Controller Layer + Navigation: glues `UI` and `Logic` layers. Here should be performed all calls to the UI and logic. Navigation is responsible for routing between screens when something happens in the app (update in database or user interaction). The layer is optional and depends on implementation.
 - Logic Layer: contains business logic and entities. Also communicates with relational DB storage and performs CRUD operations over the storage. The DB is a relational DB with an ability to make a full-text search to meet feature requirements.
@@ -18,11 +18,12 @@ See the high-level architecture below (as a diagram):
 
 The diagram (scheme) shows the data flow (how the data is passed between layers and components) and navigation flow (dependencies between UI views).
 The data flow for the specific use case is coloured with its own colour to simplify tracking and improve readability of the scheme.
+
 If you have to edit/update the architecture, use the [`draw.io`](https://draw.io) service and the [raw XML file](./architecture.drawio).
 
 ## Use cases and its flows
 
-The section below contains description and details for the use cases. It accompnanies the scheme and should be used as a helper to the visual diagram above.
+Sections below contain description and details of the architecture for specific use cases. The details complement the scheme and should be used as a helper to the visual diagram above.
 Each flow corresponds to the visual path on a scheme with a specific colour (see notes in paranthesis).
 
 ### Navigation
