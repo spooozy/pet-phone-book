@@ -30,4 +30,4 @@ The initial version is 0.1.0.
 
 ## License
 
-This repository is under the Apache 2.0 license. The text of the license can be found in [LICENSE.md](https://github.com/dersim-davaod/pet-phone-book/blob/29-Add-license-info-to-repository/LICENSE.md)
+This repository is under the Apache 2.0 license. The text of the license can be found in [LICENSE.md](https://github.com/dersim-davaod/pet-phone-book/blob/29-Add-license-info-to-repository/LICENSE.md).
