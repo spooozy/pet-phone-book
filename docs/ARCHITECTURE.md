@@ -1,6 +1,6 @@
 # Project Architecture
 
-The document describes an architecture of the project and high-level details about how the main app works.
+The document describes an architecture of the project and high-level details about how the app works.
 
 
 ## Overview
@@ -32,51 +32,51 @@ The subsection describes the relations between UI views (screens) and their depe
 Given the navigation flow you have to understand what screen can open another one.
 
 - Upon opening, the app shows the “Contact List” screen.
-- Description of the navigation flow for the use case: a user can open the app and see the list of stored contacts (follow dashed light green arrows on scheme).
+- Description of the navigation flow for the use case: a user can open the app and see the list of stored contacts (follow dashed light green arrows on scheme):
     - pre-requisites: App is launched.
     - action (trigger): The application finishes loading.
     - result: The `"Contact List"` screen is displayed.
-- Description of the navigation flow for the use case: a user can close the app
+- Description of the navigation flow for the use case: a user can close the app:
     - pre-requisites: The app is open.
     - action (trigger): User performs a system action to close the app (e.g., swipes it away from the recent apps list).
     - result: The application process is terminated.
-- Description of the navigation flow for the use case: a user can open a screen where they can edit information about a specific contact (follow light purple arrows on scheme)
+- Description of the navigation flow for the use case: a user can open a screen where they can edit information about a specific contact (follow light purple arrows on scheme):
     - pre-requisites: User is on the `"Contact details"` screen.
     - action (trigger): Press the `"Edit Contact"` button.
     - result: Navigate to the `"Edit contact"` screen, which shows a form pre-filled with the current contact's data.
-- Description of the navigation flow for the use case: while looking at contact details, a user can go back to the full list of contacts (follow green arrows on scheme)
+- Description of the navigation flow for the use case: while looking at contact details, a user can go back to the full list of contacts (follow green arrows on scheme):
     - pre-requisites: User is on the `"Contact details"` screen.
     - action (trigger): Press the `"Back"` button.
     - result: Navigate to the `"Contact List"` screen.
-- Description of the navigation flow for the use case: a user can open a screen where they can add info about a new contact (follow yellow arrows on scheme)
+- Description of the navigation flow for the use case: a user can open a screen where they can add info about a new contact (follow yellow arrows on scheme):
     - pre-requisites: navigate to `"Contact List"` screen.
     - action (trigger): press the `"Create New Contact"` button.
     - result: navigate to the `"New Contact"` screen and show the screen with empty UI fields.
-- Description of the navigation flow for the use case: a user can cancel the process of creating of a new contact (follow purple arrows on scheme)
+- Description of the navigation flow for the use case: a user can cancel the process of creating of a new contact (follow purple arrows on scheme):
     - pre-requisites: User is on the `"New contact"` screen.
     - action (trigger): Press the `"Cancel"` button and confirm the cancellation.
     - result: Navigate back to the `"Contact List"` screen.
-- Description of the navigation flow for the use case: after the successful creation of a new contact, a user can see the details about the contact (follow orange arrows on scheme)
+- Description of the navigation flow for the use case: after the successful creation of a new contact, a user can see the details about the contact (follow orange arrows on scheme):
     - pre-requisites: User is on the `"New contact"` screen and has filled in the required fields.
     - action (trigger): Press the `"Save Contact"` button.
     - result: After the data is saved, navigate to the `"Contact details"` screen to show the information for the newly created contact.
-- Description of the navigation flow for the use case: a user can open a screen to see a details about the specific contact (follow red arrows on scheme)
+- Description of the navigation flow for the use case: a user can open a screen to see a details about the specific contact (follow red arrows on scheme):
     - pre-requisites: User is on the `"Contact List"` screen.
     - action (trigger): Tap on a specific contact in the list.
     - result: Navigate to the `"Contact details"` screen to show all stored information for the selected contact.
-- Description of the navigation flow for the use case: after the successful removing of existing contact, a user can see the full list of stored contacts [without the contact that was deleted] (follow light blue arrows on scheme)
+- Description of the navigation flow for the use case: after the successful removing of existing contact, a user can see the full list of stored contacts [without the contact that was deleted] (follow light blue arrows on scheme):
     - pre-requisites: User is on the `"Contact details"` screen.
     - action (trigger): Press the `"Delete Contact"` button and confirm the deletion.
     - result: Navigate to the `"Contact List"` screen. The list is updated and no longer shows the deleted contact.
-- Description of the navigation flow for the use case: a user can cancel a process of a deletion of the existing contact and open the contact details (follow yellow arrows on scheme)
+- Description of the navigation flow for the use case: a user can cancel a process of a deletion of the existing contact and open the contact details (follow yellow arrows on scheme):
     - pre-requisites: User has pressed the `"Delete Contact"` button on the `"Contact details"` screen and a confirmation dialog is shown.
     - action (trigger): Press the button to cancel the deletion (e.g., `"Cancel"` or `"No"`).
     - result: The confirmation dialog is dismissed, and the user remains on the `"Contact details"` screen.
-- Description of the navigation flow for the use case: a user can update an existing contact and open the contact details with the updated info (follow dashed magenta arrows on scheme)
+- Description of the navigation flow for the use case: a user can update an existing contact and open the contact details with the updated info (follow dashed magenta arrows on scheme):
     - pre-requisites: User is on the `"Edit contact"` screen and has changed some information.
     - action (trigger): Press the `"Save Contact"` button.
     - result: After the data is saved, navigate to the `"Contact details"` screen to show the updated information for the contact.
-- Description of the navigation flow for the use case: a user can cancel the process of updating of an existing contact (follow dark blue arrows on scheme)
+- Description of the navigation flow for the use case: a user can cancel the process of updating of an existing contact (follow dark blue arrows on scheme):
     - pre-requisites: User is on the `"Edit contact"` screen.
     - action (trigger): Press the `"Cancel"` button and confirm the cancellation.
     - result: Navigate back to the `"Contact details"` screen without saving any changes.
@@ -90,6 +90,7 @@ To pass the data within the app, the following models should be used:
 ContactFullDetails struct:
 
 - id (UUID string or unique integer)
+- id_contact (UUID unique integer)
 - name (String)
 - phone (String)
 - additional\_contact ([String])
@@ -107,7 +108,7 @@ ContactShortDescription struct:
 ```
 
 
--   Description of the data flow for the use case: a user can see all stored contacts (follow dashed light green arrows on scheme)
+-   Description of the data flow for the use case: a user can see all stored contacts (follow dashed light green arrows on scheme):
     -   pre-requisites: navigate to “Contact List” screen
     -   action (trigger): the "Contact List" appears on the screen.
     -   result:
@@ -117,7 +118,7 @@ ContactShortDescription struct:
             -   perform `SELECT` operation over the DB;
             -   extract all rows with the fields: id, name to form `ContactShortDescription` struct later;
             -   sort results alphabetically by the `name` field;
--   Description of the data flow for the use case: a user can fill the info about a new contact and store it (follow orange arrows on scheme)
+-   Description of the data flow for the use case: a user can fill the info about a new contact and store it (follow orange arrows on scheme):
     -   pre-requisites: User is on the "New contact" screen.
     -   action (trigger): User fills the form fields and presses the “Save Contact” button.
     -   result:
@@ -125,7 +126,7 @@ ContactShortDescription struct:
         -   Call the `AddNewContact(ContactFullDetails)` method in the controller layer.
         -   The controller layer calls the `CreateNewContact(ContactFullDetails)` method in the logic layer.
         -   The logic layer generates a unique `id`, validates the data, and performs an `INSERT` operation in the DB. It then returns the complete `ContactFullDetails` object (with the new `id`) to the controller, which passes it to the UI.
--   Description of the data flow for the use case: a user can get all the stored details about a specific contact (follow lime or light green arrows)
+-   Description of the data flow for the use case: a user can get all the stored details about a specific contact (follow lime or light green arrows):
     -   pre-requisites: User is on the "Contact List" screen.
     -   action (trigger): User taps on a specific contact from the list.
     -   result:
@@ -134,7 +135,7 @@ ContactShortDescription struct:
         -   The controller layer calls the `Get contact details(id)` method in the logic layer.
         -   The logic layer performs a `SELECT *` operation over the DB for the given `id`, populates a `ContactFullDetails` struct with the retrieved data, and returns it.
         -   The UI layer receives the `ContactFullDetails` object and displays its data on the "Contact details" screen.
--   Description of the data flow for the use case: a user can find contacts by their name (follow blue arrows)
+-   Description of the data flow for the use case: a user can find contacts by their name (follow blue arrows):
     -   pre-requisites: User is on the "Contact List" screen.
     -   action (trigger): User types a search query into the "Find Contact" field.
     -   result:
@@ -143,7 +144,7 @@ ContactShortDescription struct:
         -   The logic layer performs a `SELECT id, name` operation over the DB with a `WHERE` clause to find matches (e.g., using `LIKE '%searchQuery%'`).
         -   The results are sorted alphabetically and returned as an array of `ContactShortDescription` objects.
         -   The UI layer updates the contact list on the screen to show only the filtered results.
--   Description of the data flow for the use case: a user can edit/update info about stored contact and save the changes (follow dashed magenta line)
+-   Description of the data flow for the use case: a user can edit/update info about stored contact and save the changes (follow dashed magenta line):
     -   pre-requisites: User is on the "Edit contact" screen.
     -   action (trigger): User modifies the form fields and presses the “Save Contact” button.
     -   result:
@@ -152,7 +153,7 @@ ContactShortDescription struct:
         -   The controller layer calls the `Update contact details(ContactFullDetails)` method in the logic layer.
         -   The logic layer performs an `UPDATE` operation over the DB for the record with the matching `id`.
         -   The UI layer receives the updated `ContactFullDetails` object and displays it on the "Contact details" screen.
--   Description of the data flow for the use case: a user can remove a stored contact (follow light blue arrows)
+-   Description of the data flow for the use case: a user can remove a stored contact (follow light blue arrows):
     -   pre-requisites: User is on the "Contact details" screen.
     -   action (trigger): User presses the “Delete Contact” button and confirms the action.
     -   result:
