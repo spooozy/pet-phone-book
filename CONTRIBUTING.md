@@ -79,7 +79,7 @@ Clicking on it will open the PR settings.
     - Assignee - Specific people responsible for working with PR. (usually the creator of the PR);
     - Labels - mark for the convenience of filtering (documentation/bug, etc.);
     - Projects - link PR to the project. With this, the PR card will appear on the task board;
-    - Reviewers - select the people who will check PR. All team members should be indicated.
+    - Reviewers - select the people who will check PR. Choose the number of reviewers depending on the task.
 
 1. Before sending, check that the display is correct using the buttons "Write" and "Preview". Please correct any inaccuracies.
 
