@@ -68,7 +68,7 @@ Clicking on it will open the PR settings.
     - Title - briefly describe the essence of the changes;
     - Description - this field must contain:
         - Detail what exactly was changed and why;
-        - If the PR contains not a fully completed task, but a part of it, then write about the completed fragments. Then go back to the task card and use the checkboxes to mark what has already been completed (add checkboxes using markdown);
+        - If the PR contains not a fully completed task, but a part of it, then write about the completed fragments. Then go back to the issue and use the checkboxes to mark what has already been completed (add checkboxes using markdown);
         - Specify a link to the task that PR is solving. It is more appropriate to do this at the beginning of the field. Writing:
         
             `Closes:
@@ -78,12 +78,12 @@ Clicking on it will open the PR settings.
 
     - Assignee - Specific people responsible for working with PR. (usually the creator of the PR);
     - Labels - mark for the convenience of filtering (documentation/bug, etc.);
-    - Projects - link PR to the project. With this, the PR card will appear on the task board;
+    - Projects - link PR to the project. With this, the PR will appear on the task board;
     - Reviewers - select the people who will check PR. Choose the number of reviewers depending on the task.
 
 1. Before sending, check that the display is correct using the buttons "Write" and "Preview". Please correct any inaccuracies.
 1. Click on the green "Create pull request" button.
-1. After creating a PR, return to the task board. A card with a description of the new PR will appear in the "Backlog" column. Move it from the "Backlog" to the "In Review". Leave the task card in the "In Progress".
+1. After creating a PR, return to the task board. A issue with a description of the new PR will appear in the "Backlog" column. Move it from the "Backlog" to the "In Review". Leave the issue in the "In Progress".
 
 ### How to review a pull request
 
