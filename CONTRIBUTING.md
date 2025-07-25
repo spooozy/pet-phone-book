@@ -1,6 +1,6 @@
-# Contributing to `pet Phonebook` project
+# Contributing to `Pet Phonebook` project
 
-This document was created for contributors in order to simplify the work for all participants. 
+The following is a set of guidelines for contributing to Pet Phone Book. The doc contains guides on how to create a PR, how to make a code review, and all the related stuff that helps team to change the content of the repository.
 
 For quick navigation, use the [Table Of Contents](#table-of-contents).
 
@@ -38,7 +38,6 @@ Here is a step-by-step guide for creating a correct PR that is understandable to
     ```bash
     git pull origin main
     ```
-
 1. Make a short-lived branch from the latest version of the `main` branch:
     ```bash
     git checkout -b <issue-number>-<name-of-the-branch>
@@ -54,19 +53,15 @@ Here is a step-by-step guide for creating a correct PR that is understandable to
     ```
     where:
     - `<file>` - this is the name of the file whose changes are included in the commit.
-
 1. Adding a comment to our PR. It is written instead of the <description of changes> parameter and contains a brief description of the changes in the file.
     ```bash
     git commit -m "<description of changes>"
     ```
-    
 1. We are sending a new branch with changes to the repository. 
     ```bash
     git push -u origin <issue-number>-<name-of-the-branch>
     ```
-
 1. Moving on to our Github project.
-
 1. After the git push, a green "Compare & pull request" button will appear on GitHub.
 Clicking on it will open the PR settings.
 
@@ -87,9 +82,7 @@ Clicking on it will open the PR settings.
     - Reviewers - select the people who will check PR. Choose the number of reviewers depending on the task.
 
 1. Before sending, check that the display is correct using the buttons "Write" and "Preview". Please correct any inaccuracies.
-
 1. Click on the green "Create pull request" button.
-
 1. After creating a PR, return to the task board. A card with a description of the new PR will appear in the "Backlog" column. Move it from the "Backlog" to the "In Review". Leave the task card in the "In Progress".
 
 ### How to review a pull request
@@ -98,21 +91,19 @@ A check is required before merging to protect the `main`. Request a [review on G
 
 If the reviewer missed a mistake, he bears the same responsibility for it as the creator of the PR.
 
-1. Navigation 
+1. Navigation: 
     - Go to the repository tab on Github;
     - Click on the "Pull Request" button at the top. A tab will appear showing all PRs in the project;
     - Select PR by clicking on its name;
     - Go to the "Files changed" tab. All changes will be displayed here.
     
     By switching between the "Display the source diff" and "Display the rich diff" buttons, the file display format will change.
-
 1. The PR verification stage:
     - Start checking the file for issues;
     - Actions when an issues is detected: 
         - Click on the "+" sign that appears after hovering over the line. If necessary, select several lines, hold down the button and pull down to the desired line;
         - Write a clear comment on the error. It is good practice to leave a screenshot if necessary;
         - Click "Add comment to review" to finalize the comment.
-
 1. Completing the PR check:
     - Click on the "Finish your review" button;
     - Leave a general comment on this PR in the window;
