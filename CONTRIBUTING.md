@@ -13,7 +13,7 @@ For quick navigation, use the [Table Of Contents](#table-of-contents).
 
 ## Pull Request
 
-There's a long-term [branch](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) called `main`. It contains only a stable code. Stable code is a code that is ready to be released and passed all the quality gates (like compiler checks, code review process, tests). Only stable code should be added to PR.
+There's a long-term [branch](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) called `main`. It contains only a stable code. Stable code is a code that is ready to be released and passed all the quality gates (like compiler checks, code review process, tests). Only code that aims to be stable should be added to PR.
 
 ### How to make a PR
 
@@ -26,6 +26,19 @@ Here is a step-by-step guide for creating a correct PR that is understandable to
         - the "What" section: task description, specific requirements or steps to complete the task.
     - Use proper labels if needed.
 1. Assign task to yourself (including people who might work on the task).
+1. It is important to check before creating a branch whether you are in another one. The active branch is indicated with an asterisk "*". Check this with:
+    ```bash
+    git branch
+    ```
+    If you are in a different branch, then switching to the `main` branch is easy:
+    ```bash
+    git checkout main
+    ```
+    Always ensure `main` is up-to-date before creating new branches.
+    ```bash
+    git pull origin main
+    ```
+
 1. Make a short-lived branch from the latest version of the `main` branch:
     ```bash
     git checkout -b <issue-number>-<name-of-the-branch>
