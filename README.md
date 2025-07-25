@@ -30,4 +30,4 @@ The initial version is 0.1.0.
 
 ## License
 
-The license can be found in the [LICENSE.md](https://github.com/dersim-davaod/pet-phone-book/blob/29-Add-license-info-to-repository/LICENSE.md).
+The license can be found in the [LICENSE.md](LICENSE.md).
