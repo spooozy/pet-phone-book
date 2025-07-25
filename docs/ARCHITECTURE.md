@@ -117,7 +117,7 @@ ContactShortDescription struct:
         -   the `GetAllContacts` method in the logic layer do the following:
             -   perform `SELECT` operation over the DB;
             -   extract all rows with the fields: id, name to form `ContactShortDescription` struct later;
-            -   sort results alphabetically by the `name` field;
+            -   sort results alphabetically by the `name` field;.
 -   Description of the data flow for the use case: a user can fill the info about a new contact and store it (follow orange arrows on scheme):
     -   pre-requisites: User is on the "New contact" screen.
     -   action (trigger): User fills the form fields and presses the “Save Contact” button.
