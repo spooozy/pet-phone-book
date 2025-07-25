@@ -26,11 +26,11 @@ Here is a step-by-step guide for creating a correct PR that is understandable to
         - the "What" section: task description, specific requirements or steps to complete the task.
     - Use proper labels if needed.
 1. Assign task to yourself (including people who might work on the task).
-1. It is important to check before creating a branch whether you are in another one. The active branch is indicated with an asterisk "*". Check this with:
+1. Before creating a new branch, always verify the currently active branch by running. The active branch is indicated with an asterisk "*". Check this with:
     ```bash
     git branch
     ```
-    If you are in a different branch, then switching to the `main` branch is easy:
+    To switch to the `main` branch from another branch, execute:
     ```bash
     git checkout main
     ```
