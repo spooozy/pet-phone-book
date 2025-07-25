@@ -30,4 +30,4 @@ The initial version is 0.1.0.
 
 ## License
 
-The team still in the middle of the process to choice the license.
+The license can be found in the [LICENSE.md](LICENSE.md).
