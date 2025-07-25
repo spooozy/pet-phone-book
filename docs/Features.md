@@ -9,7 +9,7 @@ This document provides an overview of the application's functionality, including
 ### In development:
 
 - **View the contact list**:
-    - All saved contacts are displayed in alphabetical order.
+    - View your saved contacts in alphabetical order.
     - If there are no contacts, the application will show a hint.
 
 - **Detailed contact information**:
