@@ -11,7 +11,7 @@ The implementation is in progress.
 
 ## Contribution guide
 
-The project architecture is available [here](docs/ARCHITECTURE.md)  
+The project architecture is available [here](docs/ARCHITECTURE.md).
 
 Every change must be reviewed and must pass all the tests in order to be merged.
 
