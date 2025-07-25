@@ -2,32 +2,33 @@
 
 This document provides an overview of the application's functionality, including features that have already been implemented and features in the development process.
 
-## Core Features:
-
 ### Done:
 
-### In Development:
+- There are no developed features yet.
 
-- **Contact List Overview**:
-    - User can view all saved contacts in alphabetical order. If contacts are not saved, a corresponding message is displayed.
+### In development:
 
-- **View Contact Details**:
-    - User can view all saved details about the selected contact in read-only format.
+- **View the contact list**:
+    - All saved contacts are displayed in alphabetical order.
+    - If there are no contacts, the application will show a hint.
+
+- **Detailed contact information**:
+    - View full contact data in a read-only format.
 
 - **Add Contact**:
-    - User can create a new contact by filling a name and at least one method of communication (phone number, email or Telegram, Instagram, VK and Facebook nickname).
-    - User can also save info for all provided methods as well as some additional information (last name, birthday, address, place of work and notes).
-    - Data validation ensures that the input is correct, and accompanying messages inform User about successful saving or errors that have occurred.
+    - Create new contacts by specifying a name and up to 10 ways to contact.
+    - Save important information such as birthdays or addresses.
+    - Add personal notes to each contact.
 
-- **Edit Contact**:
-    - User can edit an existing contact by changing a form with the contact data already saved. 
-    - Same validation rules and messaging behavior as "Add Contact" apply.
-    - After making changes User must confirm or cancel them.
+- **Edit ontacts**:
+    - Edit existing contacts by adjusting saved data. 
+    - Confirm or cancel changes before saving.
 
 - **Delete Contact**:
-    - User can delete all contact data. 
-    - This action also requires User's confirmation to avoid accidental actions and is accompanied by notification messages.
+    - Delete unnecessary contacts completely.
 
 - **Search Through Contact List**:
-    - User can find the desired contact via the search bar, which filters data in real time. 
-    - The search is performed by matches of the search query and substrings in the names of contacts.
+    - Quickly find the contacts you need using the search bar.
+    - Results are displayed in real time as you type.
+
+
