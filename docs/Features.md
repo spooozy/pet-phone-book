@@ -20,7 +20,7 @@ This document provides an overview of the application's functionality, including
     - Save important information such as birthdays or addresses.
     - Add personal notes to each contact.
 
-- **Edit ontacts**:
+- **Edit Contacts**:
     - Edit existing contacts by adjusting saved data. 
     - Confirm or cancel changes before saving.
 
