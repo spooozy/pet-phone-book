@@ -1,6 +1,6 @@
 # Contributing to `Pet Phonebook` project
 
-The following is a set of guidelines for contributing to Pet Phone Book. The doc contains guides on how to create a PR, how to make a code review, and all the related stuff that helps team to change the content of the repository.
+The following is a set of guidelines for contributing to `Pet Phonebook`. The doc contains guides on how to create a PR, how to make a code review, and all the related stuff that helps team to change the content of the repository.
 
 For quick navigation, use the [Table Of Contents](#table-of-contents).
 
