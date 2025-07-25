@@ -29,5 +29,3 @@ This document provides an overview of the application's functionality, including
 
 - **Search Through Contact List**:
     - Quickly find the contacts you need using the real-time search.
-
-
