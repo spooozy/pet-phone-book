@@ -15,17 +15,16 @@ This document provides an overview of the application's functionality, including
 - **Detailed contact information**:
     - View detailed info about the previously saved contact.
 
-- **Add Contact**:
+- **Add new contacts**:
     - Create new contacts by specifying a name and up to 10 ways to contact.
     - Save important information such as birthdays or addresses.
     - Add personal notes to each contact.
 
-- **Edit Contacts**:
-    - Edit existing contacts by adjusting saved data. 
-    - Confirm or cancel changes before saving.
-
-- **Delete Contact**:
+- **Edit contacts**:
+    - Edit existing contacts by adjusting saved data.
+      
+- **Delete contacts**:
     - Delete unnecessary contacts completely.
 
-- **Search Through Contact List**:
+- **Search by contact list**:
     - Quickly find the contacts you need using the real-time search.
