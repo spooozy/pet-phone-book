@@ -22,6 +22,7 @@ This document provides an overview of the application's functionality, including
 
 - **Edit contacts**:
     - Edit existing contacts by adjusting saved data.
+    - Confirm or cancel changes before saving.
       
 - **Delete contacts**:
     - Delete unnecessary contacts completely.
