@@ -3,8 +3,8 @@ CREATE TABLE IF NOT EXISTS contacts (
     name TEXT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS additional_information (
-    id_info INTEGER PRIMARY KEY AUTOINCREMENT,
+CREATE TABLE IF NOT EXISTS contact_details (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     id_contact INTEGER NOT NULL,
     birthday TEXT,
     workplace TEXT,
@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS additional_information (
 );
 
 CREATE TABLE IF NOT EXISTS communication_methods (
-    id_method INTEGER PRIMARY KEY AUTOINCREMENT,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     id_contact INTEGER NOT NULL,
     type TEXT NOT NULL,
     value TEXT NOT NULL,
