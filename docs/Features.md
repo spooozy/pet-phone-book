@@ -13,7 +13,7 @@ This document provides an overview of the application's functionality, including
     - If there are no contacts, the application will show a hint.
 
 - **Detailed contact information**:
-    - View full contact data in a read-only format.
+    -View detailed info about the previously saved contact.
 
 - **Add Contact**:
     - Create new contacts by specifying a name and up to 10 ways to contact.
