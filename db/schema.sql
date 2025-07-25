@@ -1,10 +1,10 @@
-CREATE TABLE IF NOT EXISTS сontacts (
+CREATE TABLE IF NOT EXISTS contacts (
     id_contact INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS additional_information (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id_info INTEGER PRIMARY KEY AUTOINCREMENT,
     id_contact INTEGER NOT NULL,
     birthday TEXT,
     workplace TEXT,
@@ -14,19 +14,11 @@ CREATE TABLE IF NOT EXISTS additional_information (
 );
 
 CREATE TABLE IF NOT EXISTS communication_methods (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    id_method INTEGER PRIMARY KEY AUTOINCREMENT,
     id_contact INTEGER NOT NULL,
-    way_1 TEXT,
-    way_2 TEXT,
-    way_3 TEXT,
-    way_4 TEXT,
-    way_5 TEXT,
-    way_6 TEXT,
-    way_7 TEXT,
-    way_8 TEXT,
-    way_9 TEXT,
-    way_10 TEXT,
-    FOREIGN KEY (id_contact) REFERENCES Contacts(id_contact) ON DELETE CASCADE
+    type TEXT NOT NULL,
+    value TEXT NOT NULL,
+    FOREIGN KEY (id_contact) REFERENCES contacts(id_contact) ON DELETE CASCADE
 );
 
 CREATE VIRTUAL TABLE IF NOT EXISTS contacts_fts USING fts5(
