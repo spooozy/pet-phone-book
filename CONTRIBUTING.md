@@ -1,4 +1,4 @@
-# Contributing to `Pet phonebook` project
+# Contributing to `pet Phonebook` project
 
 This document was created for contributors in order to simplify the work for all participants. 
 
@@ -48,7 +48,7 @@ Here is a step-by-step guide for creating a correct PR that is understandable to
     - `<issue-number>` - number of the corresponding issue we're working on;
     - `<name-of-the-branch>` - description related to the title of the task. The description must describe the task that is being worked on in the current branch.
 1. Work on the task and implement required changes.
-1. We add the files that we want to offer to the pull request. The file name is specified instead of the <file> parameter.
+1. Files to include in the pull request are specified using the command. The file name is specified instead of the <file> parameter.
     ```bash
     git add <file>
     ```
@@ -74,7 +74,12 @@ Clicking on it will open the PR settings.
     - Description - this field must contain:
         - Detail what exactly was changed and why;
         - If the PR contains not a fully completed task, but a part of it, then write about the completed fragments. Then go back to the task card and use the checkboxes to mark what has already been completed (add checkboxes using markdown);
-        - Specify a link to the task that PR is solving. It is more appropriate to do this at the beginning of the field. Writing `#<issue-number>`, then the link to the issue will be inserted automatically.
+        - Specify a link to the task that PR is solving. It is more appropriate to do this at the beginning of the field. Writing:
+        
+            `Closes:
+            #<issue-number>` 
+        
+            Link to the issue will be inserted automatically.
 
     - Assignee - Specific people responsible for working with PR. (usually the creator of the PR);
     - Labels - mark for the convenience of filtering (documentation/bug, etc.);
@@ -105,7 +110,7 @@ If the reviewer missed a mistake, he bears the same responsibility for it as the
     - Start checking the file for issues;
     - Actions when an issues is detected: 
         - Click on the "+" sign that appears after hovering over the line. If necessary, select several lines, hold down the button and pull down to the desired line;
-        - Write a clear comment on the error. It is good practice to attach a screenshot;
+        - Write a clear comment on the error. It is good practice to leave a screenshot if necessary;
         - Click "Add comment to review" to finalize the comment.
 
 1. Completing the PR check:
