@@ -13,7 +13,7 @@ This document provides an overview of the application's functionality, including
     - If there are no contacts, the application will show a hint.
 
 - **Detailed contact information**:
-    -View detailed info about the previously saved contact.
+    - View detailed info about the previously saved contact.
 
 - **Add Contact**:
     - Create new contacts by specifying a name and up to 10 ways to contact.
@@ -28,7 +28,6 @@ This document provides an overview of the application's functionality, including
     - Delete unnecessary contacts completely.
 
 - **Search Through Contact List**:
-    - Quickly find the contacts you need using the search bar.
-    - Results are displayed in real time as you type.
+    - Quickly find the contacts you need using the real-time search.
 
 
