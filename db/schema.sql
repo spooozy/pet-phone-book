@@ -1,19 +1,19 @@
-CREATE TABLE IF NOT EXISTS Contacts (
+CREATE TABLE IF NOT EXISTS сontacts (
     id_contact INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS Additional_information (
+CREATE TABLE IF NOT EXISTS additional_information (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     id_contact INTEGER NOT NULL,
     birthday TEXT,
     workplace TEXT,
     address TEXT,
     notes TEXT,
-    FOREIGN KEY (id_contact) REFERENCES Contacts(id_contact) ON DELETE CASCADE
+    FOREIGN KEY (id_contact) REFERENCES contacts(id_contact) ON DELETE CASCADE
 );
 
-CREATE TABLE IF NOT EXISTS Communication_methods (
+CREATE TABLE IF NOT EXISTS communication_methods (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     id_contact INTEGER NOT NULL,
     way_1 TEXT,
@@ -31,21 +31,21 @@ CREATE TABLE IF NOT EXISTS Communication_methods (
 
 CREATE VIRTUAL TABLE IF NOT EXISTS contacts_fts USING fts5(
     name,
-    content='Contacts',
+    content='contacts',
     content_rowid='id_contact'
 );
 
-CREATE TRIGGER IF NOT EXISTS contacts_ai AFTER INSERT ON Contacts
+CREATE TRIGGER IF NOT EXISTS contacts_ai AFTER INSERT ON contacts
 BEGIN
     INSERT INTO contacts_fts(rowid, name) VALUES (new.id_contact, new.name);
 END;
 
-CREATE TRIGGER IF NOT EXISTS contacts_ad AFTER DELETE ON Contacts
+CREATE TRIGGER IF NOT EXISTS contacts_ad AFTER DELETE ON contacts
 BEGIN
     DELETE FROM contacts_fts WHERE rowid = old.id_contact;
 END;
 
-CREATE TRIGGER IF NOT EXISTS contacts_au AFTER UPDATE ON Contacts
+CREATE TRIGGER IF NOT EXISTS contacts_au AFTER UPDATE ON contacts
 BEGIN
     DELETE FROM contacts_fts WHERE rowid = old.id_contact;
     INSERT INTO contacts_fts(rowid, name) VALUES (new.id_contact, new.name);
