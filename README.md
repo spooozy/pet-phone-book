@@ -22,13 +22,17 @@ The initial version is 0.1.0.
 
 ## Team info
 
-- [Kseniya Korzun](https://github.com/Cassiopeia2107) - Project Manager
-- [Elizaveta Shakhlan](https://github.com/shaklanchik) - Product Manager
-- [Mazim Kozlov](https://github.com/maks2134) - CTO (backend + frontend)
-- [Roman Kondratenya](https://github.com/labudap) - backend
+- [Kseniya Korzun](https://github.com/Cassiopeia2107) - project manager
+- [Elizaveta Shakhlan](https://github.com/shaklanchik) - product manager
+- [Maksim Kozlov](https://github.com/maks2134) - CTO (backend + frontend)
+- [Roman Kondratenya](https://github.com/labudap) - backend + frontend
 - [Elizaveta Matalyga](https://github.com/spooozy) - backend
-- [Olga Yurchenko](https://github.com/Kavinsky228) - backend
+- [Olga Yurchenko](https://github.com/Kavinsky228) - backend (automation)
 
 ## License
 
+<<<<<<< HEAD
 The team still in the middle of the process to choice the license.
+=======
+The license can be found in the [LICENSE.md](LICENSE.md).
+>>>>>>> main
