@@ -2,6 +2,12 @@
 
 This document describes the database schema used for storing contacts and their related information.
 
+## Table of Contents
+- [Tables Overview](#tables-overview)
+- [Data Formats and Conventions](#data-formats-and-conventions)
+- [Full-Text Search](#full-text-search)
+- [Database Setup](#database-setup)
+
 ## Tables Overview
 
 ### 1. `phonebook`
@@ -21,25 +27,25 @@ Stores additional, optional information about contacts. Each record is linked to
 |---|---|---|
 | `id` | `INTEGER NOT NULL` | Primary key, unique identifier for the record. |
 | `id_contact` | `INTEGER NOT NULL` | Foreign key referencing `phonebook(id_contact)`. |
-| `birthday` | `TEXT` | The contact’s birth date. See Data Formats and Conventions. |
+| `birthday` | `TEXT` | The contact’s birth date. See [Data Formats and Conventions](#data-formats-and-conventions). |
 | `workplace` | `TEXT` | Company or job title. |
 | `address` | `TEXT` | Physical address. |
 | `notes` | `TEXT` | Free-text notes about the contact. |
 
 ### 3. `communication_methods`
 
-Stores various communication methods for a contact. A single contact can have multiple communication methods.
+Stores various communication methods for a contact. A single contact can have multiple communication methods; the schema imposes no limit on their number.
 
 | Field | Type | Description |
 |---|---|---|
 | `id` | `INTEGER NOT NULL` | Primary key, unique identifier for the record. |
 | `id_contact` | `INTEGER NOT NULL` | Foreign key referencing `phonebook(id_contact)`. |
-| `type` | `TEXT NOT NULL` | The type of communication method. See Data Formats and Conventions. |
-| `value` | `TEXT NOT NULL` | The value for the method. See Data Formats and Conventions. |
+| `type` | `TEXT NOT NULL` | The type of communication method. See [Data Formats and Conventions](#data-formats-and-conventions) for details. |
+| `value` | `TEXT NOT NULL` | The value for the method. See [Data Formats and Conventions](#data-formats-and-conventions) for details. |
 
 ## Data Formats and Conventions
 
-This section is the single source of truth for data format requirements. While the database uses flexible types like `TEXT`, the application logic must enforce these rules to ensure data consistency and predictable behavior.
+This section is the single source of truth for data format requirements. While the database uses flexible types like `TEXT`, the application logic must enforce the rules described in the table below to ensure data consistency and predictable behavior.
 
 | Field | Format / Convention | Rules & Examples |
 |---|---|---|
@@ -58,7 +64,7 @@ Queries against this table should use the `MATCH` operator instead of `LIKE`. Fo
 
 ## Database Setup
 
-This section explains how to create and initialize the database from the [initialize_db.sql](../db/initialize_db.sql) script. This is necessary for:
+This section explains how to create and initialize the database from the [`initialize_db.sql`](../db/initialize_db.sql) script. This is necessary for:
 -   **Local Development:** Each developer can quickly set up their own instance of the database.
 -   **Testing:** Automated tests can create a clean database before each run.
 -   **Initial Deployment:** To set up the database for the first time in a new environment.
