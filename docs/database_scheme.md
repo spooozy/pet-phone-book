@@ -34,7 +34,7 @@ Stores additional, optional information about contacts. Each record is linked to
 
 ### 3. `communication_methods`
 
-Stores various communication methods for a contact. A single contact can have multiple communication methods; the schema imposes no limit on their number.
+Stores various communication methods for a contact. One contact can have several communication methods; the scheme does not impose restrictions on their number. But we will have a limit of 10 communication methods through the backend.
 
 | Field | Type | Description |
 |---|---|---|
