@@ -31,4 +31,7 @@ function processNumbersDemo() {
 	console.log("Сумма чисел:", processor.calculateSum());
 }
 
-processNumbersDemo();
+processNumbersDemo(
+
+  
+);
