@@ -9,9 +9,11 @@ The phonebook is an app to store info about your acquaintances and ways to conta
 
 The implementation is in progress.
 
-## Contribution guide
+## Architectural scheme
 
 The project architecture is available [here](docs/ARCHITECTURE.md).
+
+## Contribution guide
 
 Every change must be reviewed and must pass all the tests in order to be merged.
 
