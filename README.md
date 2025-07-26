@@ -5,6 +5,8 @@
 The goal of the project is to implement a phonebook.
 The phonebook is an app to store info about your acquaintances and ways to contact them.
 
+You can read about the project's features [here](docs/Features.md).
+
 ## How to run / to build the app
 
 The implementation is in progress.
