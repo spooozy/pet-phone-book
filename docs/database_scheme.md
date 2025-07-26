@@ -21,7 +21,7 @@ Stores additional, optional information about contacts. Each record is linked to
 |---|---|---|
 | `id` | `INTEGER NOT NULL` | Primary key, unique identifier for the record. |
 | `id_contact` | `INTEGER NOT NULL` | Foreign key referencing `phonebook(id_contact)`. |
-| `birthday` | `TEXT` | The contact’s birth date (e.g., `YYYY-MM-DD`). |
+| `birthday` | `TEXT` | The contact’s birth date. See Data Formats and Conventions. |
 | `workplace` | `TEXT` | Company or job title. |
 | `address` | `TEXT` | Physical address. |
 | `notes` | `TEXT` | Free-text notes about the contact. |
@@ -34,17 +34,31 @@ Stores various communication methods for a contact. A single contact can have mu
 |---|---|---|
 | `id` | `INTEGER NOT NULL` | Primary key, unique identifier for the record. |
 | `id_contact` | `INTEGER NOT NULL` | Foreign key referencing `phonebook(id_contact)`. |
-| `type` | `TEXT NOT NULL` | The type of communication method (e.g., 'Email', 'Phone', 'Telegram'). |
-| `value` | `TEXT NOT NULL` | The value for the method (e.g., 'user@example.com', '+1234567890'). |
+| `type` | `TEXT NOT NULL` | The type of communication method. See Data Formats and Conventions. |
+| `value` | `TEXT NOT NULL` | The value for the method. See Data Formats and Conventions. |
+
+## Data Formats and Conventions
+
+This section is the single source of truth for data format requirements. While the database uses flexible types like `TEXT`, the application logic must enforce these rules to ensure data consistency and predictable behavior.
+
+| Field | Format / Convention | Rules & Examples |
+|---|---|---|
+| **Primary Keys** (`id`, `id_contact`) | `INTEGER` | - **Not Nullable**<br>- Auto-incrementing, managed by SQLite. |
+| `phonebook.name` | `TEXT` | - **Not Nullable**<br>- Must be a non-empty string.<br>- Recommended length: 1-255 characters. |
+| `contact_details.birthday` | `TEXT (YYYY-MM-DD)` | - **Nullable**<br>- Must be a valid date in ISO 8601 format.<br>- **Example:** `1995-08-23` |
+| `communication_methods.type` | `TEXT (Enum)` | - **Not Nullable**<br>- Must be one of the predefined values recognized by the application.<br>- **Allowed values:** `'Phone'`, `'Mobile'`, `'Email'`, `'Telegram'`, `'Website'`, `'Work'` |
+| `communication_methods.value` | `TEXT (Conditional)` | - **Not Nullable**<br>- The format strictly depends on the corresponding `type` value:<ul><li>**If type is `Phone`, `Mobile`, or `Work`:** Must be a phone number, recommended in E.164 format (e.g., `+14155552671`).</li><li>**If type is `Email`:** Must be a valid email address (e.g., `user@example.com`).</li><li>**If type is `Telegram`:** Must be a username starting with `@` (e.g., `@username`).</li><li>**If type is `Website`:** Must be a full, valid URL (e.g., `https://example.com`).</li></ul> |
+| `workplace`, `address`, `notes` | `TEXT` | - **Nullable**<br>- Free-form text. No strict format is enforced. Can be an empty string. |
 
 ## Full-Text Search
 
 To provide fast searching by contact names, a virtual table `phonebook_fts` is used. This table is an extension of SQLite called FTS5, which indexes the `name` column from the `phonebook` table for efficient text-based queries.
+
 Queries against this table should use the `MATCH` operator instead of `LIKE`. For more detailed information, refer to the [official SQLite FTS5 documentation](https://www.sqlite.org/fts5.html).
 
 ## Database Setup
 
-This section explains how to create and initialize the database from the `initialize_db.sql` script. This is necessary for:
+This section explains how to create and initialize the database from the [initialize_db.sql](../db/initialize_db.sql) script. This is necessary for:
 -   **Local Development:** Each developer can quickly set up their own instance of the database.
 -   **Testing:** Automated tests can create a clean database before each run.
 -   **Initial Deployment:** To set up the database for the first time in a new environment.
@@ -59,11 +73,8 @@ SQLite3 must be installed on your system.
 
 ### Execution
 
-To create the database, navigate to the directory containing `initialize_db.sql` and run the following command in your terminal:
+To create the database, navigate to the root directory of the project and run the following command in your terminal:
 
 ```bash
-sqlite3 contacts.db < schema.sql
+sqlite3 db/contacts.db < db/initialize_db.sql
 ```
-This command will:
-- Create a new file named phonebook.db (the database).
-- Execute the SQL commands from [../db/initialize_db.sql]`initialize_db.sql` to create the tables, triggers, and indexes inside it.
