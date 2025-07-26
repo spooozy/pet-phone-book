@@ -1,0 +1,24 @@
+.pageContainer {
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.listItem {
+  background-color: #ffffff;
+  margin-bottom: 12px !important;
+  border-radius: 16px !important; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.09);
+  }
+}
+
+.fab {
+  position: fixed !important;
+  bottom: 32px;
+  right: 32px;
+}
