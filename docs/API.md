@@ -6,7 +6,7 @@ To connect the user interface (UI) with the backend logic, a clear and consisten
 
 ## Protocol and Versioning
 
-The API is a RESTful service operating over HTTP/S. All requests and responses use the JSON data format.
+The API is a RESTful service operating over HTTP. All requests and responses use the JSON data format.
 
 API versioning is handled through the URL path. The current version is **v1**.
 
