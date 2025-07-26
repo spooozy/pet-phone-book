@@ -2,12 +2,6 @@
 
 This document describes the database schema used for storing contacts and their related information.
 
-## Table of Contents
-- [Tables Overview](#tables-overview)
-- [Data Formats and Conventions](#data-formats-and-conventions)
-- [Full-Text Search](#full-text-search)
-- [Database Setup](#database-setup)
-
 ## Tables Overview
 
 ### 1. `phonebook`
@@ -34,13 +28,13 @@ Stores additional, optional information about contacts. Each record is linked to
 
 ### 3. `communication_methods`
 
-Stores various communication methods for a contact. One contact can have several communication methods; the scheme does not impose restrictions on their number. But we will have a limit of 10 communication methods through the backend.
+Stores various communication methods for a contact. A single contact can have multiple communication methods. The schema does not impose a limit on their number, however, an application-level limit of 10 communication methods per contact will be enforced.
 
 | Field | Type | Description |
 |---|---|---|
 | `id` | `INTEGER NOT NULL` | Primary key, unique identifier for the record. |
 | `id_contact` | `INTEGER NOT NULL` | Foreign key referencing `phonebook(id_contact)`. |
-| `type` | `TEXT NOT NULL` | The type of communication method. See [Data Formats and Conventions](#data-formats-and-conventions) for details. |
+| `type` | `TEXT NOT NULL` | A user-defined label for the communication method. See [Data Formats and Conventions](#data-formats-and-conventions) for details. |
 | `value` | `TEXT NOT NULL` | The value for the method. See [Data Formats and Conventions](#data-formats-and-conventions) for details. |
 
 ## Data Formats and Conventions
@@ -52,8 +46,8 @@ This section is the single source of truth for data format requirements. While t
 | **Primary Keys** (`id`, `id_contact`) | `INTEGER` | - **Not Nullable**<br>- Auto-incrementing, managed by SQLite. |
 | `phonebook.name` | `TEXT` | - **Not Nullable**<br>- Must be a non-empty string.<br>- Recommended length: 1-255 characters. |
 | `contact_details.birthday` | `TEXT (YYYY-MM-DD)` | - **Nullable**<br>- Must be a valid date in ISO 8601 format.<br>- **Example:** `1995-08-23` |
-| `communication_methods.type` | `TEXT (Enum)` | - **Not Nullable**<br>- Must be one of the predefined values recognized by the application.<br>- **Allowed values:** `'Phone'`, `'Mobile'`, `'Email'`, `'Telegram'`, `'Website'`, `'Work'` |
-| `communication_methods.value` | `TEXT (Conditional)` | - **Not Nullable**<br>- The format strictly depends on the corresponding `type` value:<ul><li>**If type is `Mobile Phone`, or `Work`:** Must be a phone number, recommended in E.164 format (e.g., `+14155552671`).</li><li>**If type is `Email`:** Must be a valid email address (e.g., `user@example.com`).</li><li>**If type is `Telegram`:** Must be a username starting with `@` (e.g., `@username`).</li><li>**If type is `Website`:** Must be a full, valid URL (e.g., `https://example.com`).</li></ul> |
+| `communication_methods.type` | `TEXT` | - **Not Nullable**<br>- A user-defined label for the communication method.<br>- The application may suggest standard types (e.g., 'Phone', 'Email') but allows the user to enter custom ones.<br>- **Examples:** `'Work Phone'`, `'Social Media'`, `'Personal Website'` |
+| `communication_methods.value` | `TEXT` | - **Not Nullable**<br>- The corresponding value for the `type`.<br>- The format is not validated by the database but must be a non-empty string.<br>- **Examples:** `'+14155552671'`, `'user@example.com'`, `'https://example.com'` |
 | `workplace`, `address`, `notes` | `TEXT` | - **Nullable**<br>- Free-form text. No strict format is enforced. Can be an empty string. |
 
 ## Full-Text Search
