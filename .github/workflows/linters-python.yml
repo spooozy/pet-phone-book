@@ -1,0 +1,25 @@
+name: Automated-linter-launch-and-static-code-verification
+
+on: [pull_request]
+
+jobs:
+  lint-python:
+    runs-on: [self-hosted, Linux]
+
+    steps:
+      - name: Checkout the latest version of code
+        uses: actions/checkout@v4
+
+      - name: Install and set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install linter dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install flake8
+
+      - name: Run flake8 linter
+        run: |
+          python3 -m flake8

@@ -1,0 +1,24 @@
+name: Automated-linter-launch-and-static-code-verification-for-JS
+
+on: [pull_request]
+
+jobs:
+  lint-js:
+    runs-on: [self-hosted, Linux]
+
+    steps:
+      - name: Checkout the latest version of code
+        uses: actions/checkout@v4
+
+      - name: Install and set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.17'
+
+      - name: Install linter dependencies
+        run: |
+          npm i -D -E @biomejs/biome
+
+      - name: Run Biome linter
+        run: |
+          npx @biomejs/biome format --write
