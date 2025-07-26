@@ -4,15 +4,12 @@ class NumberProcessor {
 	}
 
 	getEvenNumbers() {
-		return this.numbers.filter((num) => num % 2 === 0); }
+		return this.numbers.filter((num) => num % 2 === 0);
+	}
 
 	calculateSum() {
 		return this.numbers.reduce((sum, num) => sum + num, 0);
-
-
 	}
-
-
 }
 
 function processNumbersDemo() {
@@ -21,16 +18,11 @@ function processNumbersDemo() {
 
 		8, 9, 10,
 	];
-	const processor = new NumberProcessor(numbersArray)
-  ;
+	const processor = new NumberProcessor(numbersArray);
 
-	console.log    ("Исходный массив:", numbersArray)     ;
+	console.log("Исходный массив:", numbersArray);
 	console.log("Чётные числа:", processor.getEvenNumbers());
 	console.log("Сумма чисел:", processor.calculateSum());
 }
 
-processNumbersDemo(
-  
-
-
-);
+processNumbersDemo();

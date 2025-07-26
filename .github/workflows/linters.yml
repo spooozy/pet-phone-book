@@ -1,4 +1,4 @@
-name: flake8 Linter (Python)
+name: flake8 -inter-Python
 
 on: [pull_request]
 

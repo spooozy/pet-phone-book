@@ -1,4 +1,4 @@
-name: Biome Linter (JS)
+name: Biome-Linter-JS
 
 on: [pull_request]
 

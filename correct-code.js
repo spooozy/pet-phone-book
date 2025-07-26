@@ -6,10 +6,6 @@ class NumberProcessor {
 	getEvenNumbers() {
 		return this.numbers.filter((num) => num % 2 === 0);
 	}
-
-	calculateSum() {
-		return this.numbers.reduce((sum, num) => sum + num, 0);
-	}
 }
 
 function processNumbersDemo() {
