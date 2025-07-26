@@ -10,9 +10,7 @@ class NumberProcessor {
 		return this.numbers.reduce((sum, num) => sum + num, 0);
 
 
-
 	}
-
 
 
 }
