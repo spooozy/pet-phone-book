@@ -1,4 +1,4 @@
-name: Automated-linter-launch-and-static-code-verification-for-Node
+name: Biome Linter (JS)
 
 on: [pull_request]
 
