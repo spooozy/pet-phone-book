@@ -21,4 +21,4 @@ jobs:
 
       - name: Run Biome linter
         run: |
-          npx @biomejs/biome format --write
+          npx @biomejs/biome check .

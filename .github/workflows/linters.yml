@@ -1,4 +1,4 @@
-name: Automated-linter-launch-and-static-code-verification-for-Python
+name: flake8 Linter (Python)
 
 on: [pull_request]
 
