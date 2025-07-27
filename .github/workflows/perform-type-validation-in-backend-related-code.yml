@@ -1,0 +1,27 @@
+name: Perform type validation in backend related code
+
+on: 
+  pull_request:
+    paths:
+        - 'backend/**'
+
+jobs:
+  python-types-validation:
+    runs-on: [self-hosted, Linux]
+
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v4
+
+      - name: Install and set up "Python 3.12"
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies pip and mypy
+        run: |
+          python3 -m pip3 install --upgrade pip3
+          pip3 install mypy
+      
+      - name: Valide Python code with mypy
+        run: mypy backend/

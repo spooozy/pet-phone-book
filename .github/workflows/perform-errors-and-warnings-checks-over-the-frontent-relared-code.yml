@@ -1,0 +1,27 @@
+name: Perform errors and warnings checks over the frontent relared code
+
+on: 
+  pull_request:
+    paths:
+      - 'frontend/**'
+
+jobs:
+  react-compiler-checks:
+    runs-on: [self-hosted, Linux]
+    
+    steps:
+    - name: Checkout the repository
+      uses: actions/checkout@v4
+
+    - name: Install and set up "Node.js 22.17"
+      uses: actions/setup-node@v4
+      with:
+        node-version: '22.17'
+    
+    - name: Install project dependencies
+      working-directory: ./frontend
+      run: npm ci
+
+    - name: Check for compilation errors and warnings (strict mode)
+      working-directory: ./frontend
+      run: CI=true npm run build
