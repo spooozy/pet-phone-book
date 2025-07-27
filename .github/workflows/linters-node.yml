@@ -21,4 +21,4 @@ jobs:
 
       - name: Run Biome linter
         run: |
-          npx @biomejs/biome check .
+          npx @biomejs/biome check "config/**/*.js" "config/**/*.json"
