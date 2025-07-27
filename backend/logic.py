@@ -36,3 +36,20 @@ class ContactService:
                               basic information (id and name).
         """
         return self.repository.get_all_contacts()
+
+    def get_contact_by_id(self, contact_id: int) -> Contact:
+        """Retrieves complete details for a specific contact.
+        
+        Args:
+            contact_id (int): The unique identifier of the contact to retrieve.
+            
+        Returns:
+            Contact: A fully populated contact object including all
+                   related information (contact methods, additional info).
+                   
+        Raises:
+            ValueError: If the contact_id parameter is None or invalid.
+        """
+        if contact_id is None:
+            raise ValueError("Contact ID is required")
+        return self.repository.get_contact_by_id(contact_id)

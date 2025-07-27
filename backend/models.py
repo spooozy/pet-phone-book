@@ -68,3 +68,20 @@ class Contact(BaseModel):
     name: str = Field(..., min_length=2, max_length=100)
     ways_of_contact: List[WayOfContact]
     additional_info: Optional[AdditionalInfo] = None
+
+class ShortContact(BaseModel):
+    """
+    Complete contact representation with all associated data.
+    
+    Attributes:
+        id: Unique contact identifier
+        name: Contact's full name
+        ways_of_contact: List of communication methods
+        additional_info: Optional extended metadata
+    
+    Relationships:
+        - One-to-many with WayOfContact
+        - One-to-one with AdditionalInfo
+    """
+    id: int = Field(..., gt=0)
+    name: str = Field(..., min_length=2, max_length=100)
