@@ -1,6 +1,6 @@
 # Contributing to `Pet Phonebook` project
 
-The following is a set of guidelines for contributing to `Pet Phonebook`. The doc contains guides on how to create a PR, how to make a code review, and all the related stuff that helps team to change the content of the repository.
+The file contains a set of recommendations and step-by-step instructions for contributors,
 
 For quick navigation, use the [Table Of Contents](#table-of-contents).
 
@@ -8,7 +8,7 @@ For quick navigation, use the [Table Of Contents](#table-of-contents).
 
 1. [Pull Request](#pull-request)
     - [How to make a PR](#how-to-make-a-pr)
-    - [How to review a pull request](#how-to-review-a-pull-request)
+    - [How to review a PR](#how-to-review-a-pull-request)
 1. [Branching Strategy](#branching-strategy)
 
 
@@ -21,15 +21,16 @@ There's a long-term [branch](https://git-scm.com/book/en/v2/Git-Branching-Branch
 Here is a step-by-step guide for creating a correct PR that is understandable to others. Follow the points clearly to avoid mistakes.
 
 1. Make sure that there is a corresponding task on the board. If not, please make an issue with the following structure:
-    - Clear and comprehensive title;
-    - The description must include:
+    - A clear title;
+    - A clear description. It must include:
         - the "Why" section: explanation of the business needs (why do we need the task?);
         - the "What" section: task description, specific requirements or steps to complete the task.
     - Use proper labels if needed.
 1. Assign task to yourself (including people who might work on the task).
-1. Before creating a new branch, always verify the currently active branch by running. The active branch is indicated with an asterisk "*". Check this with:
+1. Before creating a new branch, pull the latest updates from the `main` branch. Use the following commands in your favourite shell:
     ```bash
-    git branch
+    git switch main
+    git pull origin main
     ```
     To switch to the `main` branch from another branch, execute:
     ```bash
@@ -48,22 +49,24 @@ Here is a step-by-step guide for creating a correct PR that is understandable to
     - `<issue-number>` - number of the corresponding issue we're working on;
     - `<name-of-the-branch>` - description related to the title of the task. The description must describe the task that is being worked on in the current branch.
 1. Work on the task and implement required changes.
-1. Files to include in the pull request are specified using the command. The file name is specified instead of the <file> parameter.
+1. Files to include in the PR are specified using the command. The file name is specified instead of the <file> parameter.
     ```bash
     git add <file>
     ```
     where:
     - `<file>` - this is the name of the file whose changes are included in the commit.
-1. Adding a comment to our PR. It is written instead of the <description of changes> parameter and contains a brief description of the changes in the file.
+1. Add a [comment](https://www.gitkraken.com/learn/git/best-practices/git-commit-message) to our PR. It is written instead of the <description of changes> parameter.
     ```bash
     git commit -m "<description of changes>"
     ```
-1. We are sending a new branch with changes to the repository. 
+    where:
+    - `<description of changes>` - a brief, informative description of what has changed in the files.
+1. Send a new branch with changes to the repository. 
     ```bash
     git push -u origin <issue-number>-<name-of-the-branch>
     ```
 1. Moving on to our Github project.
-1. After the git push, a green "Compare & pull request" button will appear on GitHub.
+1. Create a new PR into the `main` using the web-interface of the GitHub.
 Clicking on it will open the PR settings.
 
     - Title - briefly describe the essence of the changes;
@@ -72,8 +75,9 @@ Clicking on it will open the PR settings.
         - If the PR contains not a fully completed task, but a part of it, then write about the completed fragments. Then go back to the task card and use the checkboxes to mark what has already been completed (add checkboxes using markdown);
         - Specify a link to the task that PR is solving. It is more appropriate to do this at the beginning of the field. Writing:
         
-            `Closes:
-            #<issue-number>` 
+            `Closes:`
+
+            `- #<issue-number>` 
         
             Link to the issue will be inserted automatically.
 
@@ -82,11 +86,11 @@ Clicking on it will open the PR settings.
     - Projects - link PR to the project. With this, the PR card will appear on the task board;
     - Reviewers - select the people who will check PR. Choose the number of reviewers depending on the task.
 
-1. Before sending, check that the display is correct using the buttons "Write" and "Preview". Please correct any inaccuracies.
+1. Before sending PR, check whether markdown is displayed correctly using the "Write" and "Preview" buttons. Please correct any inaccuracies.
 1. Click on the green "Create pull request" button.
 1. After creating a PR, return to the task board. A card with a description of the new PR will appear in the "Backlog" column. Move it from the "Backlog" to the "In Review". Leave the task card in the "In Progress".
 
-### How to review a pull request
+### How to review a PR
 
 A check is required before merging to protect the `main`. Request a [review on GitHub](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/about-pull-request-reviews) after creating PR.
 
@@ -121,4 +125,4 @@ Project uses a simplified [GitHub Flow Branching Strategy](https://docs.github.c
 - Primary Branch:
     - `main` - the only long-lived branch, representing the production-ready state at all times. It contains only a stable code that passed all the quality gates (compiler checks, linters and tests). All changes in the `main` branch must be done via explicit PR and code review process.
 - Feature Branches:
-    - feature-branches are short-lived branches. They live until the moment when the work in the branch is merged into the `main` branch. Such branches and created from the `main` branch and must contain improvements/fixes that correspond to particular issue on the team's task board.
+    - feature-branches are short-lived branches. They live until the moment when the work in the branch is merged into the `main` branch. Such branches and created from the `main` branch and must contain improvements/fixes that correspond to particular issue on the team task board.
