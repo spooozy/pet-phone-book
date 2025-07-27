@@ -7,14 +7,15 @@ The phonebook is an app to store info about your acquaintances and ways to conta
 
 You can read about the project's features [here](docs/Features.md).
 
-## Build with:
+## Technology stack
+
+The project was built and tested using the following technologies and their minimum versions to run:
 
 |    | Technologies                                                                                                                                 |
 |-------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| **Backend** | ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)   ![Bottle](https://img.shields.io/badge/Bottle-0.13-4CEDD8) ![SQLite](https://img.shields.io/badge/SQLite-3.49-F4A460?logo=sqlite&logoColor=white) |
-| **Frontend** | ![React](https://img.shields.io/badge/Node.js-22.17-green?logo=nodedotjs)  ![React](https://img.shields.io/badge/React-19.1-blue?logo=react) |
+| **Backend** | ![Python](https://img.shields.io/badge/Python-3.12+-blue?logo=python)   ![Bottle](https://img.shields.io/badge/Bottle-0.13+-4CEDD8) ![SQLite](https://img.shields.io/badge/SQLite-3.49+-F4A460?logo=sqlite&logoColor=white) |
+| **Frontend** | ![React](https://img.shields.io/badge/Node.js-22.17+-green?logo=nodedotjs)  ![React](https://img.shields.io/badge/React-19.1+-blue?logo=react) |
 | **Instruments** | ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-5b5b5b?logo=github-actions) ![Biome](https://img.shields.io/badge/Biome-5b5b5b?logo=biome) ![Flake8](https://img.shields.io/badge/Flake8-5b5b5b) |
-
 
 ## How to run / to build the app
 
