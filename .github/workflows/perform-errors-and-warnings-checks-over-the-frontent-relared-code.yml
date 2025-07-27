@@ -6,7 +6,7 @@ on:
       - 'frontend/**'
 
 jobs:
-  react-compiler-checks:
+  js-errors-and-warnings-checks:
     runs-on: [self-hosted, Linux]
     
     steps:
