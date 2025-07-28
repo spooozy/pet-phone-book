@@ -1,4 +1,4 @@
-name: Perform type validation in backend related code
+name: Perform type validation over the backend related code
 
 on: 
   pull_request:
@@ -18,9 +18,8 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Install dependencies pip and mypy
+      - name: Install mypy dependency
         run: |
-          python3 -m pip3 install --upgrade pip3
           pip3 install mypy
       
       - name: Valide Python code with mypy
