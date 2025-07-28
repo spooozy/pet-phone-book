@@ -127,7 +127,7 @@ The following data models is being used to pass the data between components.
 - Description of the data flow for viewing contact details (follow lime or light green arrows on the scheme):
     - Pre-requisites: The `Contact details` screen appears.
     - Flow:
-	- The UI calls a method in controller to add new contact. 
+	- The UI calls a method in controller to get specific contact. 
 	- The controller passes the request to the logic layer (calls the method from the logic layer).
 	- The logic layer makes a request to the storage.
 	- The storage retrieves specific contact and returns as single entity.
@@ -141,8 +141,8 @@ The following data models is being used to pass the data between components.
 	- The controller passes the request to the logic layer (calls the method from the logic layer).
 	- The logic layer makes a request to the storage.
 	- The storage retrieves all stored contacts, that fit to the request string and returns as a sorted list.
-	- The logic layer recieves the data from the storage and converts it to the list of `ContactFullDetails`.
-	- The controller receives the list of `ContactFullDetails`.
+	- The logic layer recieves the data from the storage and converts it to the list of `ContactShortDetails`.
+	- The controller receives the list of `ContactShortDetails`.
         - The UI layer receives the data and displays the list of contacts or a "No contacts" message.
 - Description of the data flow for updating a contact (follow dashed magenta arrows on the scheme):
     - Pre-requisites: The user triggers "Save Contact".
