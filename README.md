@@ -9,7 +9,14 @@ You can read about the project's features [here](docs/Features.md).
 
 ## How to run / to build the app
 
-The implementation is in progress.
+### Try the server part:
+- Setup virtual environment
+    - Open terminal in root of the project.
+    - In terminal write `python3 -m venv venv`. It will create `venv` folder.
+    - Activate your environment by entering `source venv/bin/activate` for Unix or `.\venv\Scripts\activate` for Windows.
+    - In the terminal, go to the folder `backend`.
+    - Write `pip install -r requirements.txt`.
+- Enter `pytest test_contact.py` to run tests and check their results.
 
 ## Contribution guide
 
